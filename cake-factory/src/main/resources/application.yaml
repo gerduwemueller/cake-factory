@@ -1,5 +1,37 @@
 
+################
+# Springboot
+################
 spring:
-   mustache:
-      suffix: .html
-      
+#   mustache:
+#      suffix: .html
+
+   # JPA Configuration
+   jpa:
+      # JPA Properties
+      properties:
+         hibernate:
+            #dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+            #dialect: org.hibernate.dialect.DerbyTenSevenDialect
+            # Dialect erkennt Spring Boot !
+            # Zumindest für HSQL
+
+      # Hibernate Properties
+      hibernate:
+         # Hibernate DDL (create, create-drop, validate, update, none)
+         ddl-auto: update
+         
+   
+################
+# Data source
+################
+datasource:
+   local:
+      # Derby
+      #jdbcUrl: jdbc:derby:projects-db;create=true
+      # HSQL lokal
+      #jdbcUrl: jdbc:hsqldb:projects-db/hsqldb
+      # TEST mit In-Memory DB
+      jdbcUrl: jdbc:hsqldb:mem:projects-db
+      #user: sa
+            
