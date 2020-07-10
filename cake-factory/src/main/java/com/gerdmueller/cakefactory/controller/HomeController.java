@@ -1,4 +1,4 @@
-package com.gerdmueller.cakefactory.web;
+package com.gerdmueller.cakefactory.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
