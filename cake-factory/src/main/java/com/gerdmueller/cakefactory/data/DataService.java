@@ -7,9 +7,9 @@ import com.gerdmueller.cakefactory.entities.HibernateEntity;
 
 public interface DataService {
 
-	Optional<? extends HibernateEntity> getById(long id);
+	Optional<? extends HibernateEntity> getById(Long id);
 	public List<? extends HibernateEntity> getAll();
 	HibernateEntity save(HibernateEntity entity);
-	void deleteById(long id);
+	void deleteById(Long id);
 
 }

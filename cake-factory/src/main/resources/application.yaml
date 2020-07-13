@@ -8,6 +8,7 @@ spring:
 
    # JPA Configuration
    jpa:
+      show-sql: true
       # JPA Properties
       properties:
          hibernate:
@@ -19,7 +20,10 @@ spring:
       # Hibernate Properties
       hibernate:
          # Hibernate DDL (create, create-drop, validate, update, none)
-         ddl-auto: update
+         ddl-auto: validate
+         
+   flyway:
+      enabled: true
          
    
 ################
@@ -27,11 +31,14 @@ spring:
 ################
 datasource:
    local:
-      # Derby
-      #jdbcUrl: jdbc:derby:projects-db;create=true
-      # HSQL lokal
-      #jdbcUrl: jdbc:hsqldb:projects-db/hsqldb
-      # TEST mit In-Memory DB
-      jdbcUrl: jdbc:hsqldb:mem:projects-db
-      #user: sa
+   
+      # HSQL 
+      # lokal
+      #jdbcUrl: jdbc:hsqldb:projects-db/hsqldb   
+      # Server
+      jdbcUrl: jdbc:hsqldb:hsql://localhost/cakedb            
+      # In-Memory DB
+      #jdbcUrl: jdbc:hsqldb:mem:projects-db
+      #user: property set with -D at startup
+      #password: property set with -D at startup
             

@@ -6,13 +6,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
-import com.gerdmueller.cakefactory.data.CakeDataService;
+import com.gerdmueller.cakefactory.data.CatalogDataService;
 
 @Controller
 public class HomeController {
 	
 	@Autowired
-	CakeDataService dataService;
+	CatalogDataService dataService;
 	
 	@ModelAttribute
 	public void addCakesToModel(Model model) {

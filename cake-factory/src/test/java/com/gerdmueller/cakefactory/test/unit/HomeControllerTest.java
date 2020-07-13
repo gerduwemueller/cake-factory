@@ -11,13 +11,13 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import com.gerdmueller.cakefactory.controller.HomeController;
-import com.gerdmueller.cakefactory.data.CakeDataService;
+import com.gerdmueller.cakefactory.data.CatalogDataService;
 
 @WebMvcTest(HomeController.class)
 class HomeControllerTest {
 	
 	@MockBean 
-	CakeDataService dataService;
+	CatalogDataService dataService;
 	
     @Autowired
     private MockMvc mockMvc;	
